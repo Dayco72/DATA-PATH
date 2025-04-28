@@ -16,7 +16,7 @@ module BancoReg (
 	            $readmemb("Bdatos", mem); 
     end
 	
-    // Escritura (flanco de subida)
+    // Escritura sincrona
     always @(posedge clk) begin
         if (RegEn)
             mem[WriteReg] <= WriteData;
